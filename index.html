@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shugyla Beibit | Portfolio</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root{
+  --bg:#fff7ea;
+  --card:#ffffff;
+  --accent:#ff6fae;
+  --accent2:#ffd84d;
+  --text:#2b2b2b;
+  --muted:#6b6b6b;
+  --radius:18px;
+  --shadow:0 12px 40px rgba(255,111,174,.25);
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:
+    radial-gradient(800px 500px at 10% 10%, rgba(255,216,77,.45), transparent 60%),
+    radial-gradient(800px 500px at 90% 20%, rgba(255,111,174,.35), transparent 60%),
+    var(--bg);
+  color:var(--text);
+}
+
+/* NAV */
+header{
+  position:sticky;
+  top:0;
+  background:rgba(255,247,234,.85);
+  backdrop-filter:blur(10px);
+  border-bottom:2px solid var(--accent2);
+  z-index:10;
+}
+.nav{
+  max-width:1100px;
+  margin:auto;
+  padding:16px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.logo{
+  font-weight:700;
+  color:var(--accent);
+}
+.menu a{
+  margin-left:12px;
+  padding:8px 14px;
+  border-radius:999px;
+  text-decoration:none;
+  color:var(--text);
+  font-size:14px;
+}
+.menu a:hover{
+  background:var(--accent2);
+}
+
+/* SECTIONS */
+section{
+  max-width:1100px;
+  margin:40px auto;
+  padding:0 16px;
+}
+.card{
+  background:var(--card);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:24px;
+  margin-bottom:24px;
+}
+h1,h2,h3{margin-top:0}
+
+/* HERO */
+.hero{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:24px;
+}
+@media(max-width:900px){.hero{grid-template-columns:1fr}}
+
+.badge{
+  display:inline-block;
+  padding:6px 12px;
+  background:var(--accent2);
+  border-radius:999px;
+  font-size:12px;
+  font-weight:600;
+}
+.hero h1{
+  font-size:38px;
+  color:var(--accent);
+}
+.hero p{color:var(--muted)}
+
+.info div{
+  padding:10px 14px;
+  border-radius:14px;
+  background:#fff3da;
+  margin-bottom:10px;
+  font-size:14px;
+}
+
+/* BUTTON */
+.btn{
+  display:inline-block;
+  padding:10px 16px;
+  border-radius:14px;
+  background:var(--accent);
+  color:white;
+  text-decoration:none;
+  font-size:14px;
+  margin-top:10px;
+}
+.btn.yellow{
+  background:var(--accent2);
+  color:#2b2b2b;
+}
+
+/* LINKS GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+}
+@media(max-width:900px){.grid{grid-template-columns:1fr}}
+
+.tile{
+  padding:18px;
+  border-radius:18px;
+  background:#fffaf0;
+  border:2px dashed var(--accent2);
+}
+.tile h3{margin-bottom:6px}
+
+/* TASKS */
+.task{
+  padding:16px;
+  border-radius:16px;
+  background:#fff0f6;
+  border-left:6px solid var(--accent);
+  margin-bottom:12px;
+}
+.task .date{
+  font-size:12px;
+  font-weight:700;
+  color:var(--accent);
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:30px 16px;
+  color:var(--muted);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">Shugyla Beibit</div>
+    <div class="menu">
+      <a href="#about">About</a>
+      <a href="#links">Links</a>
+      <a href="#tasks">Tasks</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="card">
+    <span class="badge">Student Portfolio</span>
+    <h1>Shugyla Beibit</h1>
+    <p>
+      Physics student • HTML • CSS • JavaScript
+    </p>
+    <a class="btn" href="#links">Open Projects</a>
+    <a class="btn yellow" href="#tasks">View Tasks</a>
+  </div>
+
+  <div class="card info">
+    <div><b>Email:</b> sgylabejbit@gmail.com</div>
+    <div><b>Phone:</b> +77754701398</div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="card">
+    <h2>About Me</h2>
+    <p>
+      I am a Physics student who is exploring HTML, CSS, and JavaScript, and creating educational projects,
+      mini applications, and visually appealing presentations.
+      This website showcases information about me, my achievements, certificates, projects,
+      and academic work.
+    </p>
+  </div>
+</section>
+
+<!-- LINKS -->
+<section id="links">
+  <div class="card">
+    <h2>Projects & Courses</h2>
+    <div class="grid">
+
+      <div class="tile">
+        <h3>Mini Project (Website)</h3>
+        <p>Physics learning platform</p>
+        <a class="btn" target="_blank"
+           href="https://v0-physics-learning-platform.vercel.app/">Open Website</a>
+      </div>
+
+      <div class="tile">
+        <h3>Mini Project Presentation</h3>
+        <p>Google Drive</p>
+        <a class="btn" target="_blank"
+           href="https://drive.google.com/file/d/1kMhwpCjRBeE-28vNkv_3QjpVKeG8dq3y/view?usp=drivesdk">
+           Open Slides</a>
+      </div>
+
+      <div class="tile">
+        <h3>Course Presentation</h3>
+        <p>Google Drive</p>
+        <a class="btn" target="_blank"
+           href="https://drive.google.com/file/d/1evJ5f1KNRlNNYBIJfGqaqcFAn-6It2lv/view?usp=drivesdk">
+           Open Course</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TASKS -->
+<section id="tasks">
+  <div class="card">
+    <h2>Weekly Tasks</h2>
+
+    <div class="task">
+      <div class="date">15-10-2025</div>
+      <ul>
+        <li>Finish and publish tasks to GitHub</li>
+        <li>Complete allocated task</li>
+        <li>Create personal profile page</li>
+      </ul>
+    </div>
+
+    <div class="task">
+      <div class="date">26-11-2025</div>
+      <ul>
+        <li>Progress report presentation</li>
+        <li>Mini project improvement</li>
+        <li>Responsive HTML & CSS table</li>
+      </ul>
+    </div>
+
+    <div class="task">
+      <div class="date">03-12-2025</div>
+      <ul>
+        <li>Review W3Schools HTML & CSS</li>
+        <li>Prepare slides</li>
+      </ul>
+    </div>
+
+    <div class="task">
+      <div class="date">10-12-2025</div>
+      <ul>
+        <li>Final personal portfolio + CV</li>
+        <li>Certification presentation</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="card">
+    <h2>Contact</h2>
+    <p><b>Email:</b> sgylabejbit@gmail.com</p>
+    <p><b>Phone:</b> +77754701398</p>
+  </div>
+</section>
+
+<footer>
+  © 2025 Shugyla Beibit • Student Portfolio
+</footer>
+
+</body>
+</html>
